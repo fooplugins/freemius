@@ -1,0 +1,289 @@
+/* GENERAL */
+body, span, input, select, label, a, div, th, td {
+	font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+	text-align: left;
+}
+body {
+	color: #444;
+	font-size: 13px;
+	line-height: 1.4em;
+}
+
+/* WRAP: Remove default page wrap of 800px and make it unrestricted */
+#wrap_section {
+	max-width: initial;
+	padding: 20px 20px 80px 20px;
+	margin: 0;
+}
+
+/* HEADER: Update the header and remove the icon to make it fit into WordPress a bit better */
+#header {
+	margin: 0 0 20px 0;
+	background: transparent;
+}
+#header.card {
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+#header .product-icon {
+	display: none;
+}
+#header .product-header-body {
+	margin-left: 0;
+	padding-top: 0;
+}
+#header h1.page-title {
+	color: #444;
+}
+#header h2.plugin-title {
+	color: #444;
+}
+#header h3 {
+	color: #999;
+}
+
+/* MONEY_BACK_GUARANTEE: Make the money back guarantee look like a WordPress notification */
+#money_back_guarantee {
+	padding: 12px;
+	margin: 20px 0;
+	border: 1px solid #eee;
+	border-left-width: 5px;
+	border-radius: 3px;
+	border-left-color: #0085ba;
+	-webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+	box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+}
+#money_back_guarantee:before,
+#money_back_guarantee:after {
+	display: none;
+}
+#money_back_guarantee h1 {
+	display: none;
+	/* If you want to display the header just remove the display: none; above */
+	font-size: 14px;
+	text-transform: uppercase;
+	color: #0085ba;
+	margin-top: 0;
+	margin-bottom: 10px;
+	letter-spacing: 1px;
+	text-align: left;
+}
+#money_back_guarantee h1 .stars {
+	display: none;
+}
+#money_back_guarantee p {
+	font-size: 14px;
+	margin: 0;
+}
+
+/* Removed padding so faq sits correctly on left of the screen */
+#cover {
+	padding: 0;
+}
+/* To make the faq left aligned while still having the pricing tables centered we need to text-align: center; the container for them. */
+#packages_container {
+	text-align: center;
+}
+
+/* This is the small splurb before the top 3 tab slider buttons (Save up to X% annually!) */
+#billing_cycle > span {
+	font-weight: normal;
+	font-size: 16px;
+}
+
+/* TAB_SLIDER: The actual tab-slider, changed to use the WP primary button colors */
+.tab-slider {
+	background: #fff;
+	border-radius: 0;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+.tab-slider .slider {
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #0085ba), color-stop(1, #006799));
+	background-image: -webkit-linear-gradient(top, #0085ba, #006799);
+	background-image: -moz-linear-gradient(top, #0085ba, #006799);
+	background-image: -ms-linear-gradient(top, #0085ba, #006799);
+	background-image: -o-linear-gradient(top, #0085ba, #006799);
+	background-image: linear-gradient(to bottom, #0085ba, #006799);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0085ba', endColorstr='#006799');
+}
+.tab-slider ul li {
+	color: #555;
+	font-weight: normal;
+	-webkit-transition: color 0.5s ease, text-shadow 0.5s ease, border-color 0.5s ease, background-color 0.5s ease;
+	-moz-transition: color 0.5s ease, text-shadow 0.5s ease, border-color 0.5s ease, background-color 0.5s ease;
+	-ms-transition: color 0.5s ease, text-shadow 0.5s ease, border-color 0.5s ease, background-color 0.5s ease;
+	-o-transition: color 0.5s ease, text-shadow 0.5s ease, border-color 0.5s ease, background-color 0.5s ease;
+	transition: color 0.5s ease, text-shadow 0.5s ease, border-color 0.5s ease, background-color 0.5s ease;
+	border: solid 1px #ccc;
+	border-right-color: transparent;
+	background-color: transparent;
+}
+.tab-slider ul li:hover {
+	color: #23282d;
+	background-color: #f9f9f9;
+}
+.tab-slider ul li:first-child {
+	border: solid 1px #ccc;
+	border-right-color: transparent;
+	-webkit-border-top-left-radius: 3px;
+	-webkit-border-bottom-left-radius: 3px;
+	-moz-border-radius-topleft: 3px;
+	-moz-border-radius-bottomleft: 3px;
+	border-top-left-radius: 3px;
+	border-bottom-left-radius: 3px;
+}
+.tab-slider ul li:last-child {
+	border: solid 1px #ccc;;
+	-webkit-border-top-right-radius: 3px;
+	-webkit-border-bottom-right-radius: 3px;
+	-moz-border-radius-topright: 3px;
+	-moz-border-radius-bottomright: 3px;
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+}
+.tab-slider ul li.selected {
+	cursor: default;
+	color: #FFF;
+	text-shadow: 0 -1px 1px #006799,1px 0 1px #006799,0 1px 1px #006799,-1px 0 1px #006799;
+	border: solid 1px #006799;
+	border-right-color: #006799;
+	background-color: transparent;
+}
+.tab-slider ul li.selected:hover {
+	color: #FFF;
+	background-color: transparent;
+}
+
+/* PACKAGES: Completely changes the way the packages are laid out in the page */
+#packages,
+#packages_container.packages-2 #packages {
+	margin-top: 50px;
+	margin-left: 0;
+	display: inline-block; /* Needs to be an inline-block so it can be centered using text-align: center; */
+}
+#packages_container.packages-2 #packages article {
+	/* Fix margins so packages align to center correctly */
+	margin-left: 10px;
+	margin-right: 10px;
+}
+#packages > ul {
+	margin: 0;
+}
+/* As the LI's are now floated clear after the UL to prevent content overlap */
+#packages > ul:after {
+	content: '';
+	display:table;
+	clear: both;
+}
+#packages > ul>li {
+	float: left;
+	margin-bottom: 15px;
+}
+#packages > ul>li article {
+	float: none; /* float was moved up to the LI */
+}
+#packages > ul>li article header {
+	overflow: hidden; /* added to prevent margin bleed through issue */
+}
+#packages > ul>li article header h2 {
+	background-color: #0085ba;
+	color: #fff;
+	border: 1px solid #006799;
+	box-shadow: inset 0 1px 0 rgba(221,221,221,0.5),0 1px 0 rgba(0,0,0,0.15);
+	margin-bottom: 15px;
+	text-transform: capitalize;
+	font-weight: normal;
+}
+#packages > ul>li article header h3 {
+	text-transform: initial;
+	margin-bottom: 15px;
+	margin-top: 0;
+	color: #999;
+	font-size: 15px;
+	font-weight: normal;
+}
+#packages > ul>li article .offer {
+	border-bottom: 1px solid #e6e6e6;
+}
+#packages > ul>li article .offer .price {
+	margin-bottom: 20px;
+}
+#packages > ul>li article .offer .price var,
+#packages > ul>li article .offer .price .price-decimal {
+	color: #444;
+}
+#packages > ul>li article .offer .period {
+	text-transform: capitalize;
+	font-size: 15px;
+	font-weight: normal;
+}
+#packages > ul>li article .offer .license {
+	text-transform: capitalize;
+	font-size: 15px;
+	font-weight: normal;
+	color: #444;
+}
+#packages > ul>li article .support {
+	font-weight: normal;
+	padding: 10px 0;
+	color: #999;
+}
+#packages ul>li article .features {
+	border-bottom: 5px solid #0085ba;
+}
+
+/* Change the background color of the selected license within a package */
+.licenses li.selected {
+	background: #0085ba;
+}
+/* Change the discount green to the bootstrap success green */
+.licenses li .discount {
+	background: #5cb85c;
+	color: #fff;
+	border: 1px solid #4cae4c;
+}
+
+/* The primary button colors, as far as I can tell this is not used in the pricing table at all but I'm styling it here anyway */
+button.btn-primary, button.primary, a.btn-primary {
+	background: #0085ba;
+	color: #fff;
+	border: 1px solid #006799;
+	box-shadow: inset 0 1px 0 rgba(221,221,221,0.5),0 1px 0 rgba(0,0,0,0.15);
+}
+button.btn-primary:hover, button.primary:hover, a.btn-primary:hover {
+	background: #008ec2;
+	color: #fff;
+	border: 1px solid #006799;
+}
+/* Secondary button colors, this is used for both "Your Plan" and "Upgrade Now" */
+button.btn-secondary, button.secondary, a.btn-secondary {
+	background: #5cb85c;
+	color: #fff;
+	border: 1px solid #4cae4c;
+	box-shadow: inset 0 1px 0 rgba(221,221,221,0.5),0 1px 0 rgba(0,0,0,0.15);
+}
+button.btn-secondary:hover, button.secondary:hover, a.btn-secondary:hover {
+	background: #449d44;
+	color: #fff;
+	border: 1px solid #398439;
+}
+/* Tertiary button colors, this is used for "Downgrade" */
+button.btn-tertiary, button.tertiary, a.btn-tertiary {
+	background: #d9534f;
+	color: #fff;
+	border: 1px solid #d9534f;
+	box-shadow: inset 0 1px 0 rgba(221,221,221,0.5),0 1px 0 rgba(0,0,0,0.15);
+}
+button.btn-tertiary:hover, button.tertiary:hover, a.btn-tertiary:hover {
+	background: #c9302c;
+	color: #fff;
+	border: 1px solid #ac2925;
+}
+
+/* FAQ: Tighten up the spacing of the FAQ section a bit more */
+#faq {
+	padding: 0;
+	margin: 50px 0;
+}
