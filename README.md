@@ -1,6 +1,6 @@
 # Freemius Custom CSS
 
-This is just a small repo that holds out custom CSS for the Freemius SDK integration with our plugins.
+This is just a small repo that holds our custom CSS for the Freemius SDK integration with our plugins.
 
 #### pricing.css
 ```
