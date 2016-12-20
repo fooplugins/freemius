@@ -287,3 +287,7 @@ button.btn-tertiary:hover, button.tertiary:hover, a.btn-tertiary:hover {
 	padding: 0;
 	margin: 50px 0;
 }
+
+.multi-billing-cycles #trial_header {
+	margin: auto;
+}
